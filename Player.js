@@ -2,7 +2,6 @@ class Player {
   constructor(name, badge) {
     this.name = name;
     this.badge = badge;
-    this.wins = 0;
     this.hand = '';
   }
 
