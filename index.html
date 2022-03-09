@@ -14,6 +14,7 @@
       <h3 class="winnings">Dollars Won: $0</h3>
       <div class="selected-hand-container human-hand-container">
         <img class="selected-card human-selected-card">
+        <h2>Hand Played</h2>
       </div>
     </section>
     <section class="center-container">
@@ -22,22 +23,22 @@
         <h2 class="invitation">Choose Your Poker Game!</h2>
       </div>
       <section class="poker-game-choice">
-        <button class="button-classic-game button-poker-game" id="classic">
-          <h3>CLASSIC GAME</h3>
-          <h4>Hand Strength:<br><br>
-            AK  beats JTs<br>
-            JTs beats 22<br>
+        <button class="button-classic-game button-poker-game" data-id="classic">
+          <h3 data-id="classic">CLASSIC GAME</h3>
+          <h4 data-id="classic">Hand Strength:<br><br>
+            AK  beats JT<br>
+            JT beats 22<br>
             22  beats AK
           </h4>
         </button>
-        <button class="button-fancy-game button-poker-game" id="fancy">
-          <h3>FANCY GAME</h3>
-          <h4>Hand Strength:<br><br>
-            AK  beats JTs and Black Joker<br>
-            JTs beats 22 and Black Joker<br>
+        <button class="button-fancy-game button-poker-game" data-id="fancy">
+          <h3 data-id="fancy">FANCY GAME</h3>
+          <h4 data-id="fancy">Hand Strength:<br><br>
+            AK  beats JT and Black Joker<br>
+            JT beats 22 and Black Joker<br>
             22  beats AK and Red Joker<br>
             BJ  beats 22 and Red Joker<br>
-            RJ  beats AK and JTs<br>
+            RJ  beats AK and JT &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<br>
           </h4>
         </button>
       </section>
@@ -55,13 +56,10 @@
           <button class="hand"><img class="AK joker" data-id="BJoker" src="./assets/black-joker.svg" alt="Black Joker"></button>
         </section>
       </section>
-     
         <div class="button-container">
           <button class="button button-change-game">Change Game</button>
           <button class="button button-reset-score">Reset Score</button>
         </div>
-     
-   
     </section>
     <section class="right-container">
       <img class="poker-bot" src="./assets/poker-bot.png" alt="image of poker bot">
@@ -69,6 +67,7 @@
       <h3 class="winnings">Dollars Won: $0</h3>
       <div class="selected-hand-container bot-hand-container">
         <img class="selected-card human-selected-card">
+        <h2>Hand Played</h2>
       </div>
     </section>
   </body>

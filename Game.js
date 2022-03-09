@@ -2,8 +2,8 @@ class Game {
   constructor(humanPlayer, pokerBot) {
     this.player1 = humanPlayer;
     this.player2 = pokerBot;
-    this.player1Wins = 10;
-    this.player2Wins = 10;
+    this.player1Wins = 0;
+    this.player2Wins = 0;
     this.winner = '';
     this.choices = [];
     this.gameType = '';
@@ -17,7 +17,6 @@ class Game {
     }
       this.gameType = gameTypeInput;
   };
-
 
   evaluateClassic(player1Hand, player2Hand) {
     if (player1Hand === player2Hand) {
@@ -53,13 +52,8 @@ class Game {
       return this.player2Wins++;
     }
   }
+  
   resetGame() {
     this.winner = '';
   }
 }
-
-// AK (rock)> JTs && BJ
-// 22 (paper)> AK && RJ
-// JTs (scissors) > 22 && BJ
-// BJ (alien)> 22 && RJ
-// RJ (hard on)> Ak && JTs
