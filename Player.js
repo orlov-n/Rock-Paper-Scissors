@@ -14,5 +14,4 @@ class Player {
     var randomHand = game.choices[Math.floor(Math.random() * game.choices.length)];
     return randomHand
   } 
-
 }

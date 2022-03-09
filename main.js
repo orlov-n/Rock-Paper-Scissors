@@ -36,14 +36,15 @@ buttonResetScore.addEventListener('click', resetScore);
 handsClassic.addEventListener('click', chooseHand)
 
 function resetScore() {
-  location.reload()
+  game.player1Wins = 0
+  game.player2Wins = 0
+  updateWinnerCount()
+
 }
 
 function displayPlayerHand(event, pokerBotHand) {
-  console.log('this is event dot target ', event.target.src)
   selectedCard[0].src = event.target.src
   selectedCard[1].src = imageSource[pokerBotHand]
-  console.log(imageSource[pokerBotHand])
 }
 
 function chooseHand(event) {
@@ -59,15 +60,12 @@ function chooseHand(event) {
     updateWinnerCount()
     highlightCards(event)
     displayPlayerHand(event, pokerBotHand)
-    console.log('this is computer choice ', pokerBotHand)
-   
   }
 }
 
 function determineGame(event, pokerBotHandInstance) {
   if (game.gameType === 'classic') {
     game.evaluateClassic(event.target.dataset.id, pokerBotHandInstance)
-
   } else {
     game.evaluateFancy(event.target.dataset.id, pokerBotHandInstance)
   }
@@ -95,12 +93,11 @@ function updateWinnerMessage() {
     show(handSelections)
     show(buttonChangeGame)
     show(buttonResetScore)
-    // buttonAllHands.disabled = true
+    buttonAllHands.disabled = true
     resetInvitationMessage()
     resetHighlight()
-  }, 1500)
+  }, 1900)
 }
-
 
 function resetInvitationMessage() {
   invitation.innerText = 'Choose Your Hand!'
@@ -112,7 +109,7 @@ function updateWinnerCount() {
 }
 
 function showGameView(event) {
-  checkGameType(event.target.id)
+  checkGameType(event.target.dataset.id)
   invitation.innerText = "Choose Your Hand!"
   hide(pokerGameChoice);
   hide(buttonPokerGame[0])
@@ -135,6 +132,7 @@ function switchGameDifficulty() {
   show(pokerGameChoice);
   show(buttonPokerGame[0])
   show(buttonPokerGame[1])
+  invitation.innerText = "Choose Your Poker Game!"
 }
 
 function show(element) {
