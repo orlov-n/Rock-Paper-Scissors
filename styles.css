@@ -2,6 +2,22 @@
   border: solid blue 1px;
 } */
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.AK {
+  height: 100%;
+  width: 133px;
+}
+
+.AK:hover {
+  transform: scale(1.2);
+  border: 1px solid black;
+  /* filter: brightness(.2); */
+  /* color: blue; */
+}
 
 body {
   display: flex;
@@ -9,10 +25,8 @@ body {
   flex-direction: row;
   height: 100%;
   width: 100%;
-  /* margin-bottom: 0px; */
-   /* padding-bottom: 20px; */
-   overflow-y: hidden;
-   margin-top: 0px;
+  overflow-y: hidden;
+  margin-top: 0px;
  } 
 
  .button {
@@ -23,9 +37,10 @@ body {
 
  .button-container {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
    height: 63px;
-   margin: 185px;
+   margin: 15px;
+   width: 1188px;
  }
 
 .button-poker-game {
@@ -45,22 +60,28 @@ body {
 
 .center-container {
   background: url('assets/poker-table.jpg');
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* align-content: center; */
+  align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 900px;
+  /* height: 900px; */
   padding: 0;
   margin: 0;
   overflow: hidden;
   width: 100%;
 }
-
+.center-text-container {
+  padding: 10px
+}
 h1 {
   font-size: 25px;
   padding: 0px;
   display: flex;
   justify-content: center;
   align-self: center;
-  /* margin-top: 22px; */
   text-shadow: 2px 2px 4px #000;
   color: white;
   margin: 33px;
@@ -71,7 +92,6 @@ h2 {
   justify-content: center;
   font-size: 29px;
   padding: 0px;
-  /* margin-top: 22px; */
   text-shadow: 2px 2px 4px #000;
   color: white;
 }
@@ -79,7 +99,6 @@ h2 {
 h3 {
   font-size: 25px;
   padding: 0px;
-  /* margin-top: 22px; */
   text-shadow: 2px 2px 4px #000;
   color: white;
   margin: 0px;
@@ -93,14 +112,60 @@ h4 {
   text-shadow: 2px 2px 4px #000;
 }
 .hand {
-  height: 188px;
-  width: 99px;
-  /* margin: 0px; */
+  /* height: 22px; */
+  /* width: 22px;  */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin: 11px;
+  border-radius: 8px;
+  padding: 0px;
+  padding-bottom: 0px;
+  height: 97px;
+ }
+
+.hands-classic {
+  /* display: flex;
+  justify-content: flex-end;
+  /* height: 22px; */
+  /* flex-direction: row; */
+  /* padding: 44px; */
+  /* height: 444px; */
+  /* width: 444px; */
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -6px;
+  margin-top: -142px;
+}
+
+ 
+
+.hands-fancy {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -15px;
+  margin-bottom: 144px;
+}
+
+.hand-selections {
+  display: flex;
+  justify-content: center;
+  width: 1433px;
+  height: 130px ;
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  visibility: hidden;
+  
 }
+
 
 .left-container {
   display: flex;
@@ -114,8 +179,8 @@ h4 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 35px;
-  margin: 89px;
+  /* padding: 35px; */
+  /* margin: 0px; */
   
 }
 
@@ -133,5 +198,22 @@ h4 {
   align-items: center;
   flex-direction: column;
   background-color: rgb(13, 85, 48);
+  
+}
 
+.selected-card {
+  height: 100px;
+  width: 145px;
+  margin-top: 23px;
+  margin: 21px;
+}
+
+.selected-hand-container {
+  height: 160px;
+  width: 190px;
+}
+
+.joker {
+  height: 85px;
+  width: 100px;
 }

@@ -11,11 +11,16 @@
     <section class="left-container">
       <img class="poker-pro" src="./assets/poker-pro.jpg" alt="human poker player">
       <h2 class="left-side-header">POKER PRO</h2>
-      <h3 class="winnings">Dollars Won: 0</h3>
+      <h3 class="winnings">Dollars Won: $0</h3>
+      <div class="selected-hand-container human-hand-container">
+        <img class="selected-card human-selected-card">
+      </div>
     </section>
     <section class="center-container">
-      <h1>ROCK PAPER SCISSORS - POKER EDITION</h1>
-      <h2 class="invitation">Choose Your Poker Game!</h2>
+      <div class="center-text-container">
+        <h1>ROCK PAPER SCISSORS - POKER EDITION</h1>
+        <h2 class="invitation">Choose Your Poker Game!</h2>
+      </div>
       <section class="poker-game-choice">
         <button class="button-classic-game button-poker-game" id="classic">
           <h3>CLASSIC GAME</h3>
@@ -25,7 +30,7 @@
             22  beats AK
           </h4>
         </button>
-        <button class="button-poker-game" id="fancy">
+        <button class="button-fancy-game button-poker-game" id="fancy">
           <h3>FANCY GAME</h3>
           <h4>Hand Strength:<br><br>
             AK  beats JTs and Black Joker<br>
@@ -38,30 +43,33 @@
       </section>
       <section class="hand-selections">
         <section class="hands-classic hidden">
-          <button class="hand" id="AK"><img src="./assets/AK.png" alt="Ace King"></button>
-          <button class="hand" id="JTs"><img src="./assets/JT.png" alt="Jack Ten Suited"></button>
-          <button class="hand" id="22"><img src="./assets/22.png" alt="Deuces"></button>
+          <button class="hand"><img class="AK" data-id="AKClassic" src="./assets/AK.png" alt="Ace King"></button>
+          <button class="hand"><img class="AK" data-id="JTsClassic" src="./assets/JT.png" alt="Jack Ten Suited"></button>
+          <button class="hand"><img class="AK" data-id="22Classic" src="./assets/22.png" alt="Deuces"></button>
         </section>
         <section class="hands-fancy hidden">
-          <button class="hand" id="AK"><img src="./assets/AK.png" alt="Ace King"></button>
-          <button class="hand" id="JTs"><img src="./assets/JT.png" alt="Jack Ten Suited"></button>
-          <button class="hand" id="22"><img src="./assets/22.png" alt="Deuces"></button>
-          <button class="hand" id="RJ"><img src="./assets/red-joker.svg" alt="Red Joker"></button>
-          <button class="hand" id="BJ"><img src="./assets/black-joker.svg" alt="Black Joker"></button>
+          <button class="hand"><img class="AK" data-id="AK" src="./assets/AK.png" alt="Ace King"></button>
+          <button class="hand"><img class="AK" data-id="JTs" src="./assets/JT.png" alt="Jack Ten Suited"></button>
+          <button class="hand"><img class="AK" data-id="22" src="./assets/22.png" alt="Deuces"></button>
+          <button class="hand"><img class="AK joker" data-id="RJoker" src="./assets/red-joker.svg" alt="Red Joker"></button>
+          <button class="hand"><img class="AK joker" data-id="BJoker" src="./assets/black-joker.svg" alt="Black Joker"></button>
         </section>
       </section>
-      <section class="something">
+     
         <div class="button-container">
           <button class="button button-change-game">Change Game</button>
           <button class="button button-reset-score">Reset Score</button>
         </div>
-      </section>
+     
    
     </section>
     <section class="right-container">
       <img class="poker-bot" src="./assets/poker-bot.png" alt="image of poker bot">
       <h2 class="right-side-header">POKER BOT</h2>
-      <h3 class="winnings">Dollars Won: 0</h3>
+      <h3 class="winnings">Dollars Won: $0</h3>
+      <div class="selected-hand-container bot-hand-container">
+        <img class="selected-card human-selected-card">
+      </div>
     </section>
   </body>
 <script type="text/javascript" src="Player.js"></script>
