@@ -7,8 +7,12 @@ class Player {
 
   takeTurn(chosenHand) {
     this.hand = chosenHand;
-    console.log('this is this.hand ', this.hand)
     return this.hand;
   }
+
+  findRandomHand(game) {
+    var randomHand = game.choices[Math.floor(Math.random() * game.choices.length)];
+    return randomHand
+  } 
 
 }
