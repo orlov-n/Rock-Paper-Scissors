@@ -10,7 +10,7 @@ One of the lesser known facts is that you can play "rock, paper, scissors" game 
 This app gives user a very unique opportunity to play a poker-themed game of "rock, paper, scissors" against a computer.
 
 ## Where to Play?
-The deployed site is available [here](https://orlovorlov.github.io/Rock-Paper-Scissors/)
+The deployed site is available [here](https://orlov-n.github.io/Rock-Paper-Scissors/)
 
 ### Setup Instructions for running locally
 
